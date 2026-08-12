@@ -43,7 +43,8 @@ slim):
 
 Detection transfers across base images, and the location/entropy heuristics did
 not misfire on real database and runtime images. The 0/6 result is a small but
-meaningful precision signal (see the paper's Limitations for the scale caveat).
+meaningful precision signal; a larger image population would be needed to put a
+firm number on the false-positive rate.
 
 ## Re-running
 

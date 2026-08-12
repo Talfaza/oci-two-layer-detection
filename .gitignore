@@ -15,13 +15,8 @@ experiments/generalize/payload
 samples/*.tar
 samples/stego_oci/
 
-# LaTeX build artifacts
-paper/*.aux
-paper/*.log
-paper/*.out
-paper/*.fls
-paper/*.fdb_latexmk
-paper/*.synctex.gz
+# Paper (kept local, not part of this repo)
+paper/
 
 # Agent tooling (not part of the repo)
 .claude/

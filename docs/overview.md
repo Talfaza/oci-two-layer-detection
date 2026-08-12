@@ -37,7 +37,7 @@ good steganographic carriers:
 
 Neither alone is sufficient; together they cover each other's blind spots. This
 is the project's central claim, demonstrated by measurement (see
-[generalization.md](generalization.md) and the paper).
+[generalization.md](generalization.md)).
 
 ## Threat model
 
@@ -64,6 +64,5 @@ needed to build and evaluate the detectors.
 | `experiments/generalize/` | multi-base-image generalization matrix |
 | `samples/` | prebuilt image tarballs + OCI layout + original build inputs |
 | `results/` | captured scanner logs and the live eBPF trace |
-| `paper/` | the write-up (`main.tex`) |
 | `scripts/verify.sh` | environment/toolchain validator |
 | `docs/` | this documentation |

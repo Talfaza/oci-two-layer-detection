@@ -21,7 +21,6 @@ dynamic/       carrier builder, extractor, control binaries, hunt.bt (eBPF), doc
 experiments/   generalize/ — multi-base-image detection matrix
 samples/       prebuilt image tarballs + OCI layout + original build inputs
 results/       captured scanner logs + live eBPF trace
-paper/         write-up (main.tex)
 scripts/       verify.sh — toolchain validator
 docs/          documentation (start with overview.md)
 ```
