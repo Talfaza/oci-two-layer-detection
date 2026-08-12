@@ -1,0 +1,9 @@
+oci-two-layer-detection
+Copyright 2026 Yahia Charif
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Defensive security research: detection of steganographic payload smuggling in
+OCI/Docker images. The included proof-of-concept carrier/extractor code uses a
+harmless marker payload and is provided for building and evaluating the
+detectors. Use it only for authorized, lawful, defensive purposes.

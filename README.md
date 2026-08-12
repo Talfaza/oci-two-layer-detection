@@ -54,3 +54,10 @@ bash experiments/generalize/run_matrix.sh
 
 Linux (kernel ≥ 5.15 for the eBPF work), Docker, a C compiler, Python 3, and
 `bpftrace`. Run `scripts/verify.sh` to check the toolchain.
+
+## License
+
+Licensed under the [Apache License 2.0](LICENSE). This is defensive security
+research; the proof-of-concept carrier/extractor code uses a harmless marker
+payload and is intended for authorized, lawful, defensive use only (see
+[`NOTICE`](NOTICE)).
