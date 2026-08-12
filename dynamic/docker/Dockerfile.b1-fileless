@@ -1,0 +1,6 @@
+# B1 control: fileless exec, no carrier/decode. Build context: dynamic/
+FROM httpd:2.4
+COPY payload /usr/local/bin/payload
+COPY fileless_plain /usr/local/bin/fileless_plain
+RUN chmod +x /usr/local/bin/fileless_plain
+CMD ["/usr/local/bin/fileless_plain", "/usr/local/bin/payload"]

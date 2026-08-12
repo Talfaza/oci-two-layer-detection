@@ -1,0 +1,9 @@
+
+============================================
+[*] Analyzing: clean.tar
+============================================
+    tags: redis:alpine  |  layers: 7
+[+] CLEAN: no layer-level anomalies detected.
+
+============================================
+[=] Done. 0 HIGH finding(s).

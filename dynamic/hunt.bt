@@ -1,0 +1,45 @@
+#!/usr/bin/env bpftrace
+/* Runtime stego-extraction detector. Keys on memfd->execveat plus the
+ * read:write byte ratio. See docs/dynamic-detection.md. Run: sudo bpftrace hunt.bt */
+
+#define RATIO_ALERT 4
+
+tracepoint:syscalls:sys_exit_read
+/args->ret > 0/
+{
+    @readb[pid] += args->ret;
+}
+
+tracepoint:syscalls:sys_exit_memfd_create
+/args->ret >= 0/
+{
+    @ismemfd[pid, args->ret] = 1;
+}
+
+tracepoint:syscalls:sys_enter_write
+/@ismemfd[pid, args->fd]/
+{
+    @mfdb[pid] += args->count;
+}
+
+tracepoint:syscalls:sys_enter_execveat
+/@ismemfd[pid, args->fd]/
+{
+    $read  = @readb[pid];
+    $wrote = @mfdb[pid];
+    $ratio = $wrote > 0 ? $read / $wrote : $read;
+
+    if ($ratio >= RATIO_ALERT) {
+        printf("[!] STEGO-EXTRACTION  pid=%-6d comm=%-15s fileless exec; read=%dB wrote=%dB ratio=%d:1\n",
+               pid, comm, $read, $wrote, $ratio);
+    } else {
+        printf("[~] FILELESS-EXEC     pid=%-6d comm=%-15s read=%dB wrote=%dB ratio=%d:1 (no carrier extraction)\n",
+               pid, comm, $read, $wrote, $ratio);
+    }
+
+    delete(@readb[pid]); delete(@mfdb[pid]);
+}
+
+tracepoint:syscalls:sys_enter_execve { delete(@readb[pid]); delete(@mfdb[pid]); }
+
+END { clear(@readb); clear(@mfdb); clear(@ismemfd); }

@@ -1,0 +1,9 @@
+
+============================================
+[*] Analyzing: plain.tar
+============================================
+    tags: exp_plain:node_20-alpine  |  layers: 5
+    [!] HIGH: planted executable 'var/log/systemd-journal-cache.sh' in data dir 'var/log/' (layer bc0830310d9f, entropy 3.30) — executables do not belong here
+
+============================================
+[=] Done. 1 HIGH finding(s).

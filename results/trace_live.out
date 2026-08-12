@@ -1,0 +1,6 @@
+Attaching 6 probes...
+[~] FILELESS-EXEC     pid=283842 comm=fileless_plain  read=1904B wrote=1072B ratio=1:1 (no carrier extraction)
+[!] STEGO-EXTRACTION  pid=283843 comm=extractor       fileless exec; read=18497B wrote=1072B ratio=17:1
+
+
+

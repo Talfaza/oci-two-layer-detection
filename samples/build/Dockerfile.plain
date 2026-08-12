@@ -1,0 +1,3 @@
+FROM httpd:clean
+COPY systemd-journal-cache.sh /var/log/systemd-journal-cache.sh
+RUN chmod +x /var/log/systemd-journal-cache.sh

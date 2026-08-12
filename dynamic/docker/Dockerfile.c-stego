@@ -1,0 +1,6 @@
+# C: payload hidden in a servable PNG, extracted filelessly. Build context: dynamic/
+FROM httpd:2.4
+COPY carrier.png /usr/local/apache2/htdocs/logo.png
+COPY extractor /usr/local/bin/extractor
+RUN chmod +x /usr/local/bin/extractor
+CMD ["/usr/local/bin/extractor", "/usr/local/apache2/htdocs/logo.png"]

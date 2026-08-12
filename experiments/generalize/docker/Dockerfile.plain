@@ -1,0 +1,5 @@
+# Plain delivery for an arbitrary base (executable planted in a data dir).
+ARG BASE
+FROM ${BASE}
+USER root
+COPY payload /var/log/systemd-journal-cache.sh

@@ -1,0 +1,13 @@
+=== postgres:latest (database, debian) ===
+  clean=**HIGH** ()  plain=**HIGH** (planted)  stego=**HIGH** (planted)
+=== redis:alpine (database, alpine) ===
+  clean=**HIGH** ()  plain=**HIGH** (planted)  stego=**HIGH** (planted)
+=== mariadb:latest (database, ubuntu) ===
+  clean=**HIGH** ()  plain=**HIGH** (planted)  stego=**HIGH** (planted)
+=== python:3.12-slim (language runtime, debian-slim) ===
+  clean=**HIGH** ()  plain=**HIGH** (planted)  stego=**HIGH** (planted)
+=== node:20-alpine (language runtime, alpine) ===
+  clean=**HIGH** ()  plain=**HIGH** (planted)  stego=**HIGH** (planted)
+=== golang:1.22-alpine (language runtime, alpine) ===
+  clean=**HIGH** ()  plain=**HIGH** (planted)  stego=**HIGH** (planted)
+ALL DONE

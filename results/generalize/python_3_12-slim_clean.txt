@@ -1,0 +1,9 @@
+
+============================================
+[*] Analyzing: clean.tar
+============================================
+    tags: python:3.12-slim  |  layers: 4
+[+] CLEAN: no layer-level anomalies detected.
+
+============================================
+[=] Done. 0 HIGH finding(s).

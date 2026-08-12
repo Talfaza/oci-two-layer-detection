@@ -1,0 +1,10 @@
+
+============================================
+[*] Analyzing: stego.tar
+============================================
+    tags: exp_stego:python_3_12-slim  |  layers: 6
+    [!] HIGH: planted executable 'var/log/systemd-journal-cache.sh' in data dir 'var/log/' (layer 21741a46f1bc, entropy 3.30) — executables do not belong here
+    [!] HIGH: add-then-hide: executable 'var/log/systemd-journal-cache.sh' added in layer 21741a46f1bc (entropy 3.30), then whited-out in layer f7c3e6846edb — hidden from runtime but present in lower blob
+
+============================================
+[=] Done. 2 HIGH finding(s).

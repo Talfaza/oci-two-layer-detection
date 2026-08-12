@@ -1,0 +1,11 @@
+
+============================================
+[*] Analyzing: plain.tar
+============================================
+    tags: exp_plain:postgres_latest  |  layers: 14
+    [!] HIGH: planted executable 'var/log/systemd-journal-cache.sh' in data dir 'var/log/' (layer 48944887d7d6, entropy 3.30) — executables do not belong here
+    [.] LOW: whiteout of 'etc/alternatives/pager.1.gz' (layer 130549402290) — no matching executable add; likely a normal deletion
+    [.] LOW: whiteout of 'var/lib/apt/lists/auxfiles' (layer a4dcdc0137d7) — no matching executable add; likely a normal deletion
+
+============================================
+[=] Done. 1 HIGH finding(s).

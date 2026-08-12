@@ -1,0 +1,28 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Build artifacts (regenerate with `make` in dynamic/)
+dynamic/extractor
+dynamic/fileless_plain
+dynamic/payload
+dynamic/carrier.png
+dynamic/trace.out
+experiments/generalize/payload
+
+# Large image datasets (regenerable; see samples/README.md)
+samples/*.tar
+samples/stego_oci/
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+
+# Agent tooling (not part of the repo)
+.claude/
+CLAUDE.md

@@ -1,0 +1,11 @@
+
+============================================
+[*] Analyzing: plain.tar
+============================================
+    tags: exp_plain:mariadb_latest  |  layers: 9
+    [!] HIGH: planted executable 'var/log/systemd-journal-cache.sh' in data dir 'var/log/' (layer bc9f0081606a, entropy 3.30) — executables do not belong here
+    [.] LOW: whiteout of 'home/ubuntu' (layer f0b005205ec4) — no matching executable add; likely a normal deletion
+    [.] LOW: whiteout of 'var/lib/apt/lists/auxfiles' (layer 2b185fc279c0) — no matching executable add; likely a normal deletion
+
+============================================
+[=] Done. 1 HIGH finding(s).

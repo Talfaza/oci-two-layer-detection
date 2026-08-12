@@ -1,0 +1,5 @@
+# B0 baseline: payload as a visible file, normal execve. Build context: dynamic/
+FROM httpd:2.4
+COPY payload /usr/local/bin/payload
+RUN chmod +x /usr/local/bin/payload
+CMD ["/usr/local/bin/payload"]

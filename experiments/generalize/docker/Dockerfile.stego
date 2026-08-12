@@ -1,0 +1,6 @@
+# Stego whiteout carrier for an arbitrary base (COPY adds, RUN rm whites out).
+ARG BASE
+FROM ${BASE}
+USER root
+COPY payload /var/log/systemd-journal-cache.sh
+RUN rm /var/log/systemd-journal-cache.sh
