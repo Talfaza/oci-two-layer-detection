@@ -21,3 +21,4 @@ paper/
 # Agent tooling (not part of the repo)
 .claude/
 CLAUDE.md
+results/corpus/run.log

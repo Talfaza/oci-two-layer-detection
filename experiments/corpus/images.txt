@@ -1,0 +1,126 @@
+# Clean corpus for the false-positive-rate test (run_clean.py).
+# Format:  image:tag|category
+# Real, unmodified upstream images. Multiple tags per repo on purpose: layer
+# structure changes between versions, and that is where false positives hide.
+# Extend freely -- more images = a tighter FPR confidence interval.
+
+# --- os bases ---
+debian:12|os-base
+debian:11|os-base
+debian:10|os-base
+debian:bookworm-slim|os-base
+debian:bullseye-slim|os-base
+ubuntu:24.04|os-base
+ubuntu:22.04|os-base
+ubuntu:20.04|os-base
+alpine:3.20|os-base
+alpine:3.19|os-base
+alpine:3.18|os-base
+alpine:edge|os-base
+rockylinux:9|os-base
+rockylinux:8|os-base
+almalinux:9|os-base
+fedora:40|os-base
+fedora:39|os-base
+amazonlinux:2023|os-base
+opensuse/leap:15.6|os-base
+busybox:1.36|os-base
+busybox:stable|os-base
+
+# --- language runtimes ---
+python:3.13-slim|lang-runtime
+python:3.12-slim|lang-runtime
+python:3.12|lang-runtime
+python:3.11|lang-runtime
+python:3.11-alpine|lang-runtime
+python:3.10-slim|lang-runtime
+node:22-alpine|lang-runtime
+node:20-alpine|lang-runtime
+node:20|lang-runtime
+node:20-slim|lang-runtime
+node:18|lang-runtime
+node:18-alpine|lang-runtime
+openjdk:17-slim|lang-runtime
+openjdk:21-slim|lang-runtime
+eclipse-temurin:21-jre|lang-runtime
+eclipse-temurin:17-jre|lang-runtime
+golang:1.22-alpine|lang-runtime
+golang:1.22|lang-runtime
+golang:1.21-alpine|lang-runtime
+ruby:3.3-slim|lang-runtime
+ruby:3.2-alpine|lang-runtime
+php:8.3-cli|lang-runtime
+php:8.3-apache|lang-runtime
+php:8.2-fpm-alpine|lang-runtime
+rust:1.79-slim|lang-runtime
+rust:1.78|lang-runtime
+perl:5.40-slim|lang-runtime
+dotnet/runtime:8.0|lang-runtime
+
+# --- databases ---
+postgres:16|database
+postgres:16-alpine|database
+postgres:15|database
+postgres:15-alpine|database
+postgres:14|database
+mysql:8.4|database
+mysql:8.0|database
+mariadb:11|database
+mariadb:10.11|database
+redis:7-alpine|database
+redis:7|database
+redis:6-alpine|database
+mongo:7|database
+mongo:6|database
+memcached:1.6-alpine|database
+cassandra:5.0|database
+influxdb:2.7|database
+
+# --- web / app servers ---
+nginx:1.27-alpine|web-server
+nginx:1.27|web-server
+nginx:1.26-alpine|web-server
+nginx:stable|web-server
+httpd:2.4|web-server
+httpd:2.4-alpine|web-server
+caddy:2.8|web-server
+caddy:2.8-alpine|web-server
+traefik:3.1|web-server
+traefik:2.11|web-server
+haproxy:3.0-alpine|web-server
+haproxy:2.9|web-server
+tomcat:10.1|web-server
+tomcat:9.0|web-server
+
+# --- message brokers / infra ---
+rabbitmq:3.13-alpine|broker
+rabbitmq:3.13-management|broker
+nats:2.10-alpine|broker
+consul:1.19|infra
+vault:1.17|infra
+etcd:v3.5.15|infra
+zookeeper:3.9|infra
+
+# --- ci / build / tools ---
+maven:3.9-eclipse-temurin-21|ci-build
+gradle:8.9-jdk21|ci-build
+gcc:14|ci-build
+gcc:13|ci-build
+docker:27-cli|ci-build
+docker:27-dind|ci-build
+alpine/git:latest|ci-build
+bitnami/kubectl:latest|ci-build
+
+# --- monitoring / observability ---
+prom/prometheus:v2.54.0|monitoring
+prom/prometheus:v2.53.0|monitoring
+grafana/grafana:11.1.0|monitoring
+grafana/grafana:10.4.0|monitoring
+grafana/loki:3.1.0|monitoring
+telegraf:1.31|monitoring
+fluent/fluent-bit:3.1|monitoring
+prom/node-exporter:v1.8.2|monitoring
+
+# --- ml / data ---
+tensorflow/tensorflow:2.17.0|ml-data
+jupyter/base-notebook:latest|ml-data

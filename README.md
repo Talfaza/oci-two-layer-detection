@@ -18,7 +18,8 @@ complementary.
 ```
 static/        layer_scanner.py (ours) + baseline_scanner.py (naive control)
 dynamic/       carrier builder, extractor, control binaries, hunt.bt (eBPF), docker/
-experiments/   generalize/ — multi-base-image detection matrix
+experiments/   generalize/ — multi-base-image matrix
+               corpus/     — large-scale FPR + factorial recall harness
 samples/       prebuilt image tarballs + OCI layout + original build inputs
 results/       captured scanner logs + live eBPF trace
 scripts/       verify.sh — toolchain validator
@@ -40,6 +41,11 @@ sudo bpftrace dynamic/hunt.bt                         # then detonate the varian
 
 # Generalization across databases + language runtimes (needs Docker)
 bash experiments/generalize/run_matrix.sh
+
+# Large-scale evaluation: false-positive rate + factorial recall (needs Docker)
+python3 experiments/corpus/run_clean.py     # FPR on real upstream images
+python3 experiments/corpus/gen_stego.py     # synthetic positives, full factorial
+python3 experiments/corpus/analyze.py       # -> results/corpus/report.md
 ```
 
 ## Documentation
@@ -48,6 +54,7 @@ bash experiments/generalize/run_matrix.sh
 - [docs/static-detection.md](docs/static-detection.md) — the scanners and signals
 - [docs/dynamic-detection.md](docs/dynamic-detection.md) — the eBPF extraction detector
 - [docs/generalization.md](docs/generalization.md) — the multi-image matrix
+- [docs/corpus-evaluation.md](docs/corpus-evaluation.md) — large-scale FPR + factorial recall
 - [docs/journal.md](docs/journal.md) — running research log
 
 ## Requirements

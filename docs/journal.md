@@ -4,6 +4,54 @@ Running log of progress, decisions, and findings. Newest entries at the top.
 
 ---
 
+## 2026-08-15 — Large-scale corpus evaluation (`experiments/corpus/`)
+
+Turned the 6-image generalization matrix into a measured evaluation with a false-
+positive rate and per-factor recall, each with Wilson 95% CIs. New harness under
+`experiments/corpus/`; design in `docs/corpus-evaluation.md`.
+
+**Method.** Two classes, streamed (pull/build → scan → delete, so disk stays flat
+at any scale; both harnesses resumable via the CSV logs):
+- *Negatives (FPR):* real unmodified Docker Hub images from `images.txt`, scanned
+  as-is. Any HIGH = a false positive. (`run_clean.py`)
+- *Positives (recall):* synthesized by `stegofactory.py`, which injects carriers
+  **without Docker** — appends gzip layer blobs to a base `docker save` tar and
+  extends `manifest.json` `Layers`, the exact structure the scanner consumes. Full
+  factorial per base: family (whiteout/appended) × payload size (1K/100K/5M) ×
+  entropy (low/high) × whiteout style (file/opaque) × hide depth (1/4) = 30
+  variants/base. (`gen_stego.py`) Aggregated by `analyze.py` → `results/corpus/report.md`.
+
+**Results.**
+- **Recall (static, whiteout family): 1104/1104 = 100%** (95% CI 99.7–100%) across
+  **46 diverse bases** (os/lang/db/web/broker/ci/monitoring, mixed distros) and
+  every factorial cell. Detection keys on *structure* (planted-exec + add-then-hide),
+  so payload size, encryption, whiteout style, and hide depth do not defeat it.
+- **Appended family: 0/276 by static** — the by-design blind spot; grounds the
+  crossover at scale and feeds the dynamic eval. These PNGs double as extractor inputs.
+- **FPR:** 1 false positive across the clean corpus → **`rockylinux:8`** ships two
+  executable Anaconda **kickstart scripts** (`tmp/ks-script-*`, entropy ~4.5) that
+  trip the "planted executable in a data dir" rule. Notably **planted-alone, not
+  add-then-hide** — the core whiteout correlation did not misfire — and the other
+  RPM-family images (fedora, almalinux, amazonlinux, rockylinux:9) were clean, so
+  it is image-build-specific, not distro-wide. This is exactly the "needs an
+  allowlist at scale" limitation predicted below, now measured with a named cause.
+
+**Gotchas found.**
+- 3 stego bases (`openjdk:17-slim`, `consul:1.19`, `vault:1.17`) failed to pull —
+  deprecated/removed from Docker Hub (openjdk → eclipse-temurin; consul/vault →
+  `hashicorp/` namespace). Effective base count 46.
+- **Docker Hub anonymous pull rate limit** (100 pulls/6hr) hit mid-run after ~46
+  stego + ~62 clean pulls; the remaining clean images failed as a block until the
+  window cleared. `run_clean.py` is resumable, so re-running fills the gap. For a
+  1,000-image corpus, `docker login` (200/6hr) or a paid account is needed first.
+
+TODO: fold FPR + per-factor recall tables into the paper; add the rockylinux:8 FP
+as a "false positives and fixes" discussion (allowlist `ks-script-*` / require
+add-then-hide for HIGH / skip low-entropy plaintext); give the dynamic layer the
+same corpus treatment (benign-memfd negatives + extractor ratio sweep + ROC).
+
+---
+
 ## 2026-08-12 — Repo reorganized for GitHub
 
 Restructured into a conventional layout: `static/`, `dynamic/` (+`docker/`),
