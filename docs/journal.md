@@ -28,7 +28,7 @@ at any scale; both harnesses resumable via the CSV logs):
   so payload size, encryption, whiteout style, and hide depth do not defeat it.
 - **Appended family: 0/276 by static** — the by-design blind spot; grounds the
   crossover at scale and feeds the dynamic eval. These PNGs double as extractor inputs.
-- **FPR:** 1 false positive across the clean corpus → **`rockylinux:8`** ships two
+- **FPR: 1/99 = 1.01%** (95% CI 0.18–5.50%). The one false positive → **`rockylinux:8`** ships two
   executable Anaconda **kickstart scripts** (`tmp/ks-script-*`, entropy ~4.5) that
   trip the "planted executable in a data dir" rule. Notably **planted-alone, not
   add-then-hide** — the core whiteout correlation did not misfire — and the other
