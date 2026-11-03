@@ -4,6 +4,111 @@ Running log of progress, decisions, and findings. Newest entries at the top.
 
 ---
 
+## 2026-11-03 — Dynamic eval round 3: provenance signal closes the tail-read gap
+
+Added a second runtime signal to `hunt.bt`, independent of byte volume: is the
+ELF being exec'd from the memfd one this process **read verbatim from offset 0
+of a file**? Fingerprint (weighted 8-word sum) the 64-byte ELF header on the
+first memfd `write`; record the same fingerprint for every `read`/`pread64` (and
+offset-0 file mapping, checked at `munmap`) that returns `\x7fELF` at file offset
+0. Per-fd file position tracked from read/readv returns + `lseek`. Library
+fingerprints dropped via the existing `PROT_EXEC` code-descriptor rule. No match
+→ new verdict `STEGO-DECODE`. Also added `sched_process_exit` cleanup of per-pid
+maps (they previously leaked for every process on the host).
+
+New attacker variants in `probe.c`: `stegoraw` (payload stored unencoded) and
+`exact` (locate payload, then `pread` exactly its bytes; header read verbatim but
+at a non-zero offset). New benign class `embedded` (execs an ELF from its own
+memory). Sweep → 364 live runs, all matched to a hunt.bt alert.
+
+**Results.** Stego 238/238 = **100%** with ratio + provenance (ratio alone 58%),
+every strategy × encoding × size, tail reads included. Benign file loaders
+0/63. Embedded-payload loaders 63/63 flagged: no file provenance looks exactly
+like a decode — a known FP class, allowlist-only. B1 `sourced=1` FILELESS-EXEC,
+C STEGO-EXTRACTION, unchanged.
+
+Gaps written down (docs/dynamic-detection.md): header mimicry (payload sharing
+a 64-byte header with an on-disk binary), write-path coverage (tiny first write,
+pwrite/writev, mmap'd memfd), readv-read ELFs unfingerprinted.
+
+---
+
+## 2026-11-03 — Dynamic eval round 2: mmap closed, loader noise removed, tail-read gap found
+
+**mmap accounting.** `hunt.bt` now adds file-backed, non-anonymous `mmap` lengths
+to the read side. Naively that would count the loader's 2 MB libc mapping and
+the 112 KB `/etc/ld.so.cache` mapping for every process, so bytes are tracked per
+`(pid, fd)` and a descriptor that ever gets a `PROT_EXEC` mapping has its bytes
+subtracted (libraries always do, carriers never do); `ld.so.cache` is excluded by
+path. Traced the loader live first to confirm the mapping sequence.
+
+**Regression found in round 1's fix.** The `pread` hook also counted `ld.so`'s
+two 784 B ELF-header `pread64`s plus the 832 B `read`: benign B1 had drifted from
+1:1 to **3:1**, one step under the threshold. The round-1 sweep hid this because
+its oracle (`/proc/self/io` minus a post-loader baseline) subtracts loader
+noise the real detector does not. Same code-descriptor rule now applies to
+reads (enter/exit pairing to get the fd): live benign floor ~190 B, B1 back to 1:1.
+
+**Live sweep.** `run_dynamic.py --live` runs the real `hunt.bt` in the privileged
+container during the sweep and joins alerts by pid — 156/156 matched. Added a
+64 KB payload size and two tail extractors. Results (threshold 4):
+read/chunk/pread/mmap all **82%** (every miss is a 2:1 cover); overall stego
+27% → 41% → **63%** across the three detector generations; benign FPR **0/54**,
+max ratio 1.18. At threshold 2 whole-cover recall is 100%, but kept 4 for margin.
+
+**New gap: tail reads.** An extractor that `pread`s/maps backwards from EOF to the
+appended payload never reads the cover, so read ≈ write: **0%** at 16 KB / 64 KB
+payloads. This is a limit of the volume signal itself for trailer carriers, not
+of hook coverage. The ratio stays meaningful for formats whose decode needs the
+whole cover (pixel LSB). Candidate replacement signals: memfd bytes never seen in
+any read buffer (decode/transform), or exec'd bytes sourced from a non-zero
+offset of a non-ELF file.
+
+Also trimmed the comment block added to `hunt.bt` in round 1 (moved to docs).
+
+---
+
+## 2026-08-16 — Dynamic evaluation: evasion audit + live fix (`experiments/dynamic/`)
+
+Gave the dynamic layer the corpus treatment the static side got, and red-teamed
+`hunt.bt` against our own read strategies. New harness: `probe.c` (parameterized
+fileless-exec: reads a carrier via read/chunk/pread/mmap, then memfd+execveat,
+snapshotting `/proc/self/io` — the same rchar/wchar `hunt.bt` sums),
+`run_dynamic.py` (72-run sweep over strategy × cover:payload × payload size),
+`analyze_dynamic.py` → `results/dynamic/report.md` (ROC + evasion table).
+
+**Signal characterization.** Benign fileless loaders (read ≈ what they exec,
+ratio ≤ 1) never trip the detector — FPR 0% at any threshold ≥ 2. Stego
+extraction (cover ≫ payload) clears it once the cover:payload ratio exceeds the
+threshold; at the default 4, shallow covers (ratio 2–4) are missed — a real
+threshold-sensitivity result, mapped by the ROC.
+
+**Evasion found and confirmed LIVE.** The published `hunt.bt` summed only
+`sys_exit_read`, so a carrier read via `pread` or `mmap` was invisible to the
+ratio. Ran the *real* detector in the `--pid=host` bpftrace container and
+detonated all four strategies:
+- read/chunk → STEGO-EXTRACTION (17:1) caught
+- pread → FILELESS-EXEC (0:1) **EVADED**; mmap → FILELESS-EXEC (0:1) **EVADED**
+Traces: `results/dynamic/hunt_evasion_before.out`. So hunt.bt-as-written catches
+only ~42% of the stego sweep at threshold 4.
+
+**Fix + re-validation LIVE.** Extended the read accumulator to also hook
+`sys_exit_pread64`, `sys_exit_readv`, `sys_exit_preadv`. Re-ran live: read, chunk,
+**and pread** now all flag STEGO-EXTRACTION (18:1); detection over the sweep rises
+to ~62%. `mmap` still evades (2:1) — issues no read syscall, so a byte-sum can't
+see it; closing it needs mmap/page-fault accounting (documented residual gap).
+Traces: `results/dynamic/hunt_evasion_after.out`.
+
+Measurement note: `/proc/io` rchar counts read+pread but not mmap, matching the
+detector's coverage after the fix; a baseline snapshot is subtracted to remove
+stdio/loader noise (mmap floor ≈ 93 B). This is the "red-team your own detector"
+result the paper needed beyond the single 17:1 trace.
+
+TODO: fold the ROC + evasion table into the paper; consider an mmap/page-fault
+signal or a coarse "mmap of a file then memfd-exec" heuristic for the residual gap.
+
+---
+
 ## 2026-08-15 — Large-scale corpus evaluation (`experiments/corpus/`)
 
 Turned the 6-image generalization matrix into a measured evaluation with a false-

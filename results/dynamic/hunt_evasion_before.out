@@ -1,0 +1,6 @@
+# hunt.bt AS ORIGINALLY PUBLISHED (sys_exit_read only) — live, --pid=host
+# detonation order: read, chunk, pread, mmap
+[!] STEGO-EXTRACTION  pid=429903 comm=probe           fileless exec; read=18688B wrote=1072B ratio=17:1
+[!] STEGO-EXTRACTION  pid=429929 comm=probe           fileless exec; read=18688B wrote=1072B ratio=17:1
+[~] FILELESS-EXEC     pid=429951 comm=probe           read=1023B wrote=1072B ratio=0:1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=429969 comm=probe           read=1022B wrote=1072B ratio=0:1 (no carrier extraction)

@@ -1,13 +1,123 @@
 #!/usr/bin/env bpftrace
-/* Runtime stego-extraction detector. Keys on memfd->execveat plus the
- * read:write byte ratio. See docs/dynamic-detection.md. Run: sudo bpftrace hunt.bt */
+/* Runtime stego-extraction detector. Two signals on memfd->execveat: the
+ * read:write byte ratio, and whether the exec'd ELF header was ever read
+ * verbatim from offset 0 of a file. See docs/dynamic-detection.md.
+ * Run: sudo bpftrace hunt.bt */
 
 #define RATIO_ALERT 4
+#define ELF_MAGIC 0x464c457f
 
-tracepoint:syscalls:sys_exit_read
-/args->ret > 0/
+tracepoint:syscalls:sys_enter_read
 {
-    @readb[pid] += args->ret;
+    @rfd[tid] = (int64)args->fd; @rbuf[tid] = (uint64)args->buf;
+    @rpos[tid] = -1; @radv[tid] = 1;
+}
+
+tracepoint:syscalls:sys_enter_pread64
+{
+    @rfd[tid] = (int64)args->fd; @rbuf[tid] = (uint64)args->buf;
+    @rpos[tid] = (int64)args->pos;
+}
+
+tracepoint:syscalls:sys_enter_readv
+{
+    @rfd[tid] = (int64)args->fd; @radv[tid] = 1;
+}
+
+tracepoint:syscalls:sys_enter_preadv
+{
+    @rfd[tid] = (int64)args->fd;
+}
+
+tracepoint:syscalls:sys_exit_read,
+tracepoint:syscalls:sys_exit_pread64,
+tracepoint:syscalls:sys_exit_readv,
+tracepoint:syscalls:sys_exit_preadv
+{
+    $fd = @rfd[tid];
+    if (args->ret > 0 && !@codefd[pid, $fd]) {
+        @readb[pid] += args->ret;
+        @fdb[pid, $fd] += args->ret;
+        $p = @rbuf[tid];
+        $pos = @rpos[tid] >= 0 ? @rpos[tid] : @fpos[pid, $fd];
+        if ($p && args->ret >= 64 && $pos == 0 && *(uint32 *)uptr($p) == ELF_MAGIC) {
+            $h = *(uint64 *)uptr($p) + *(uint64 *)uptr($p + 8) * 3 +
+                 *(uint64 *)uptr($p + 16) * 5 + *(uint64 *)uptr($p + 24) * 7 +
+                 *(uint64 *)uptr($p + 32) * 11 + *(uint64 *)uptr($p + 40) * 13 +
+                 *(uint64 *)uptr($p + 48) * 17 + *(uint64 *)uptr($p + 56) * 19;
+            @srcfp[pid, $h] = 1;
+            @fdfp[pid, $fd] = $h;
+        }
+    }
+    if (args->ret > 0 && @radv[tid]) { @fpos[pid, $fd] += args->ret; }
+    delete(@rfd[tid]); delete(@rbuf[tid]); delete(@rpos[tid]); delete(@radv[tid]);
+}
+
+tracepoint:syscalls:sys_enter_lseek { @rfd[tid] = (int64)args->fd; }
+
+tracepoint:syscalls:sys_exit_lseek
+{
+    if (args->ret >= 0) { @fpos[pid, @rfd[tid]] = args->ret; }
+    delete(@rfd[tid]);
+}
+
+tracepoint:syscalls:sys_enter_openat
+/str(args->filename) == "/etc/ld.so.cache"/
+{
+    @opcache[tid] = 1;
+}
+
+tracepoint:syscalls:sys_exit_openat
+/@opcache[tid]/
+{
+    if (args->ret >= 0) { @skipfd[pid, args->ret] = 1; }
+    delete(@opcache[tid]);
+}
+
+tracepoint:syscalls:sys_enter_mmap
+/(int64)args->fd >= 0 && !(args->flags & 0x20)/
+{
+    $fd = (int64)args->fd;
+    if (!@skipfd[pid, $fd] && !@ismemfd[pid, $fd]) {
+        if (args->prot & 4) {
+            @readb[pid] -= @fdb[pid, $fd];
+            delete(@fdb[pid, $fd]);
+            delete(@srcfp[pid, @fdfp[pid, $fd]]);
+            @codefd[pid, $fd] = 1;
+        } else if (!@codefd[pid, $fd]) {
+            @readb[pid] += args->len;
+            @fdb[pid, $fd] += args->len;
+            if (args->off == 0) { @mmfd[tid] = 1; }
+        }
+    }
+}
+
+tracepoint:syscalls:sys_exit_mmap
+/@mmfd[tid]/
+{
+    if ((int64)args->ret > 0) { @maddr[pid, (uint64)args->ret] = 1; }
+    delete(@mmfd[tid]);
+}
+
+tracepoint:syscalls:sys_enter_munmap
+/@maddr[pid, (uint64)args->addr]/
+{
+    $p = (uint64)args->addr;
+    if (*(uint32 *)uptr($p) == ELF_MAGIC) {
+        $h = *(uint64 *)uptr($p) + *(uint64 *)uptr($p + 8) * 3 +
+             *(uint64 *)uptr($p + 16) * 5 + *(uint64 *)uptr($p + 24) * 7 +
+             *(uint64 *)uptr($p + 32) * 11 + *(uint64 *)uptr($p + 40) * 13 +
+             *(uint64 *)uptr($p + 48) * 17 + *(uint64 *)uptr($p + 56) * 19;
+        @srcfp[pid, $h] = 1;
+    }
+    delete(@maddr[pid, $p]);
+}
+
+tracepoint:syscalls:sys_enter_close
+{
+    $fd = (int64)args->fd;
+    delete(@skipfd[pid, $fd]); delete(@fdb[pid, $fd]); delete(@codefd[pid, $fd]);
+    delete(@fpos[pid, $fd]); delete(@fdfp[pid, $fd]);
 }
 
 tracepoint:syscalls:sys_exit_memfd_create
@@ -19,6 +129,16 @@ tracepoint:syscalls:sys_exit_memfd_create
 tracepoint:syscalls:sys_enter_write
 /@ismemfd[pid, args->fd]/
 {
+    $p = (uint64)args->buf;
+    if (!@mfdb[pid] && args->count >= 64 && *(uint32 *)uptr($p) == ELF_MAGIC) {
+        $h = *(uint64 *)uptr($p) + *(uint64 *)uptr($p + 8) * 3 +
+             *(uint64 *)uptr($p + 16) * 5 + *(uint64 *)uptr($p + 24) * 7 +
+             *(uint64 *)uptr($p + 32) * 11 + *(uint64 *)uptr($p + 40) * 13 +
+             *(uint64 *)uptr($p + 48) * 17 + *(uint64 *)uptr($p + 56) * 19;
+        @mfdfp[pid] = $h;
+        @mfdelf[pid] = 1;
+        if (@maddr[pid, $p]) { @srcfp[pid, $h] = 1; }
+    }
     @mfdb[pid] += args->count;
 }
 
@@ -28,18 +148,36 @@ tracepoint:syscalls:sys_enter_execveat
     $read  = @readb[pid];
     $wrote = @mfdb[pid];
     $ratio = $wrote > 0 ? $read / $wrote : $read;
+    $sourced = @srcfp[pid, @mfdfp[pid]];
 
     if ($ratio >= RATIO_ALERT) {
-        printf("[!] STEGO-EXTRACTION  pid=%-6d comm=%-15s fileless exec; read=%dB wrote=%dB ratio=%d:1\n",
-               pid, comm, $read, $wrote, $ratio);
+        printf("[!] STEGO-EXTRACTION  pid=%-6d comm=%-15s fileless exec; read=%dB wrote=%dB ratio=%d:1 sourced=%d\n",
+               pid, comm, $read, $wrote, $ratio, $sourced);
+    } else if (@mfdelf[pid] && !$sourced) {
+        printf("[!] STEGO-DECODE      pid=%-6d comm=%-15s fileless exec; read=%dB wrote=%dB ratio=%d:1 sourced=%d\n",
+               pid, comm, $read, $wrote, $ratio, $sourced);
     } else {
-        printf("[~] FILELESS-EXEC     pid=%-6d comm=%-15s read=%dB wrote=%dB ratio=%d:1 (no carrier extraction)\n",
-               pid, comm, $read, $wrote, $ratio);
+        printf("[~] FILELESS-EXEC     pid=%-6d comm=%-15s read=%dB wrote=%dB ratio=%d:1 sourced=%d (no carrier extraction)\n",
+               pid, comm, $read, $wrote, $ratio, $sourced);
     }
 
-    delete(@readb[pid]); delete(@mfdb[pid]);
+    delete(@readb[pid]); delete(@mfdb[pid]); delete(@mfdfp[pid]); delete(@mfdelf[pid]);
 }
 
-tracepoint:syscalls:sys_enter_execve { delete(@readb[pid]); delete(@mfdb[pid]); }
+tracepoint:syscalls:sys_enter_execve
+{
+    delete(@readb[pid]); delete(@mfdb[pid]); delete(@mfdfp[pid]); delete(@mfdelf[pid]);
+}
 
-END { clear(@readb); clear(@mfdb); clear(@ismemfd); }
+tracepoint:sched:sched_process_exit
+/pid == tid/
+{
+    delete(@readb[pid]); delete(@mfdb[pid]); delete(@mfdfp[pid]); delete(@mfdelf[pid]);
+}
+
+END {
+    clear(@readb); clear(@mfdb); clear(@ismemfd); clear(@mfdfp); clear(@mfdelf);
+    clear(@skipfd); clear(@fdb); clear(@codefd); clear(@opcache); clear(@rfd);
+    clear(@rbuf); clear(@rpos); clear(@radv); clear(@fpos); clear(@fdfp);
+    clear(@srcfp); clear(@mmfd); clear(@maddr);
+}

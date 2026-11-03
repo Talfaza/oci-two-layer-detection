@@ -10,6 +10,8 @@ dynamic/payload
 dynamic/carrier.png
 dynamic/trace.out
 experiments/generalize/payload
+experiments/dynamic/probe
+experiments/dynamic/payload_blob.h
 
 # Large image datasets (regenerable; see samples/README.md)
 samples/*.tar

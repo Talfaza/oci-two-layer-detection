@@ -1,0 +1,2 @@
+[~] FILELESS-EXEC     pid=35710  comm=fileless_plain  read=1072B wrote=1072B ratio=1:1 (no carrier extraction)
+[!] STEGO-EXTRACTION  pid=35712  comm=extractor       fileless exec; read=17665B wrote=1072B ratio=16:1

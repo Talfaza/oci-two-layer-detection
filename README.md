@@ -20,6 +20,7 @@ static/        layer_scanner.py (ours) + baseline_scanner.py (naive control)
 dynamic/       carrier builder, extractor, control binaries, hunt.bt (eBPF), docker/
 experiments/   generalize/ — multi-base-image matrix
                corpus/     — large-scale FPR + factorial recall harness
+               dynamic/    — read:write ratio sweep + hunt.bt evasion audit
 samples/       prebuilt image tarballs + OCI layout + original build inputs
 results/       captured scanner logs + live eBPF trace
 scripts/       verify.sh — toolchain validator
@@ -46,6 +47,10 @@ bash experiments/generalize/run_matrix.sh
 python3 experiments/corpus/run_clean.py     # FPR on real upstream images
 python3 experiments/corpus/gen_stego.py     # synthetic positives, full factorial
 python3 experiments/corpus/analyze.py       # -> results/corpus/report.md
+
+# Dynamic: read:write ratio sweep + hunt.bt evasion audit (ROC; no root, --live needs Docker)
+python3 experiments/dynamic/run_dynamic.py  # 364-run probe sweep (--live: real hunt.bt via Docker)
+python3 experiments/dynamic/analyze_dynamic.py   # -> results/dynamic/report.md
 ```
 
 ## Documentation

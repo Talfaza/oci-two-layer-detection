@@ -1,0 +1,383 @@
+Attaching 22 probes...
+[!] STEGO-DECODE      pid=37744  comm=probe           fileless exec; read=2334B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37745  comm=probe           fileless exec; read=2334B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37746  comm=probe           fileless exec; read=2334B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37747  comm=probe           fileless exec; read=2334B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37748  comm=probe           fileless exec; read=2334B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37749  comm=probe           fileless exec; read=2334B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37750  comm=probe           fileless exec; read=3406B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-DECODE      pid=37751  comm=probe           fileless exec; read=2334B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37752  comm=probe           fileless exec; read=2334B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37753  comm=probe           fileless exec; read=2334B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37754  comm=probe           fileless exec; read=2334B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37755  comm=probe           fileless exec; read=2334B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37756  comm=probe           fileless exec; read=2334B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37757  comm=probe           fileless exec; read=3406B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37758  comm=probe           fileless exec; read=4478B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37759  comm=probe           fileless exec; read=4478B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37760  comm=probe           fileless exec; read=4478B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37762  comm=probe           fileless exec; read=4478B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-DECODE      pid=37763  comm=probe           fileless exec; read=4286B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37764  comm=probe           fileless exec; read=4478B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37765  comm=probe           fileless exec; read=5358B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37766  comm=probe           fileless exec; read=4478B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37767  comm=probe           fileless exec; read=4478B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37768  comm=probe           fileless exec; read=4478B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37769  comm=probe           fileless exec; read=4478B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-DECODE      pid=37770  comm=probe           fileless exec; read=4286B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37771  comm=probe           fileless exec; read=4478B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37772  comm=probe           fileless exec; read=5358B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37773  comm=probe           fileless exec; read=8767B wrote=1072B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37774  comm=probe           fileless exec; read=8767B wrote=1072B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37775  comm=probe           fileless exec; read=8767B wrote=1072B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37776  comm=probe           fileless exec; read=8766B wrote=1072B ratio=8:1 sourced=0
+[!] STEGO-DECODE      pid=37777  comm=probe           fileless exec; read=4286B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37778  comm=probe           fileless exec; read=4670B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37779  comm=probe           fileless exec; read=5358B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37780  comm=probe           fileless exec; read=8767B wrote=1072B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37781  comm=probe           fileless exec; read=8767B wrote=1072B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37782  comm=probe           fileless exec; read=8767B wrote=1072B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37783  comm=probe           fileless exec; read=8766B wrote=1072B ratio=8:1 sourced=0
+[!] STEGO-DECODE      pid=37784  comm=probe           fileless exec; read=4286B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37785  comm=probe           fileless exec; read=4670B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37786  comm=probe           fileless exec; read=5358B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37787  comm=probe           fileless exec; read=34495B wrote=1072B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37788  comm=probe           fileless exec; read=34495B wrote=1072B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37789  comm=probe           fileless exec; read=34495B wrote=1072B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37790  comm=probe           fileless exec; read=34494B wrote=1072B ratio=32:1 sourced=0
+[!] STEGO-DECODE      pid=37791  comm=probe           fileless exec; read=4286B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-DECODE      pid=37792  comm=probe           fileless exec; read=1726B wrote=1072B ratio=1:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37793  comm=probe           fileless exec; read=5358B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37794  comm=probe           fileless exec; read=34495B wrote=1072B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37795  comm=probe           fileless exec; read=34495B wrote=1072B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37796  comm=probe           fileless exec; read=34495B wrote=1072B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37797  comm=probe           fileless exec; read=34494B wrote=1072B ratio=32:1 sourced=0
+[!] STEGO-DECODE      pid=37798  comm=probe           fileless exec; read=4286B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-DECODE      pid=37799  comm=probe           fileless exec; read=1726B wrote=1072B ratio=1:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37800  comm=probe           fileless exec; read=5358B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37801  comm=probe           fileless exec; read=137408B wrote=1072B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37802  comm=probe           fileless exec; read=137408B wrote=1072B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37803  comm=probe           fileless exec; read=137408B wrote=1072B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37804  comm=probe           fileless exec; read=137406B wrote=1072B ratio=128:1 sourced=0
+[!] STEGO-DECODE      pid=37805  comm=probe           fileless exec; read=4286B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-DECODE      pid=37806  comm=probe           fileless exec; read=2238B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37807  comm=probe           fileless exec; read=5358B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37808  comm=probe           fileless exec; read=137408B wrote=1072B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37809  comm=probe           fileless exec; read=137408B wrote=1072B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37810  comm=probe           fileless exec; read=137408B wrote=1072B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37811  comm=probe           fileless exec; read=137406B wrote=1072B ratio=128:1 sourced=0
+[!] STEGO-DECODE      pid=37812  comm=probe           fileless exec; read=4286B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-DECODE      pid=37813  comm=probe           fileless exec; read=2238B wrote=1072B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37814  comm=probe           fileless exec; read=5358B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37815  comm=probe           fileless exec; read=1097921B wrote=1072B ratio=1024:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37816  comm=probe           fileless exec; read=1097922B wrote=1072B ratio=1024:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37817  comm=probe           fileless exec; read=1097921B wrote=1072B ratio=1024:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37818  comm=probe           fileless exec; read=1097918B wrote=1072B ratio=1024:1 sourced=0
+[!] STEGO-DECODE      pid=37819  comm=probe           fileless exec; read=4286B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-DECODE      pid=37820  comm=probe           fileless exec; read=4286B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37821  comm=probe           fileless exec; read=5358B wrote=1072B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37822  comm=probe           fileless exec; read=1097921B wrote=1072B ratio=1024:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37823  comm=probe           fileless exec; read=1097922B wrote=1072B ratio=1024:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37824  comm=probe           fileless exec; read=1097921B wrote=1072B ratio=1024:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37825  comm=probe           fileless exec; read=1097918B wrote=1072B ratio=1024:1 sourced=0
+[!] STEGO-DECODE      pid=37826  comm=probe           fileless exec; read=4286B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-DECODE      pid=37827  comm=probe           fileless exec; read=4286B wrote=1072B ratio=3:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37828  comm=probe           fileless exec; read=5358B wrote=1072B ratio=4:1 sourced=0
+[~] FILELESS-EXEC     pid=37829  comm=probe           read=458B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37830  comm=probe           read=458B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37831  comm=probe           read=458B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37832  comm=probe           read=458B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37833  comm=probe           read=458B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37834  comm=probe           read=458B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37835  comm=probe           read=458B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[!] STEGO-DECODE      pid=37836  comm=probe           fileless exec; read=458B wrote=1072B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37837  comm=probe           fileless exec; read=458B wrote=1072B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37838  comm=probe           fileless exec; read=458B wrote=1072B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37839  comm=probe           fileless exec; read=458B wrote=1072B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37840  comm=probe           fileless exec; read=458B wrote=1072B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37841  comm=probe           fileless exec; read=458B wrote=1072B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37842  comm=probe           fileless exec; read=458B wrote=1072B ratio=0:1 sourced=0
+[~] FILELESS-EXEC     pid=37843  comm=probe           read=726B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37844  comm=probe           read=726B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37845  comm=probe           read=726B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37846  comm=probe           read=726B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37847  comm=probe           read=726B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37848  comm=probe           read=726B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37849  comm=probe           read=726B wrote=1072B ratio=0:1 sourced=1 (no carrier extraction)
+[!] STEGO-DECODE      pid=37850  comm=probe           fileless exec; read=726B wrote=1072B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37851  comm=probe           fileless exec; read=726B wrote=1072B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37852  comm=probe           fileless exec; read=726B wrote=1072B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37853  comm=probe           fileless exec; read=726B wrote=1072B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37854  comm=probe           fileless exec; read=726B wrote=1072B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37855  comm=probe           fileless exec; read=726B wrote=1072B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37856  comm=probe           fileless exec; read=726B wrote=1072B ratio=0:1 sourced=0
+[~] FILELESS-EXEC     pid=37857  comm=probe           read=1262B wrote=1072B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37858  comm=probe           read=1262B wrote=1072B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37859  comm=probe           read=1262B wrote=1072B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37860  comm=probe           read=1262B wrote=1072B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37861  comm=probe           read=1262B wrote=1072B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37862  comm=probe           read=1262B wrote=1072B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37863  comm=probe           read=1262B wrote=1072B ratio=1:1 sourced=1 (no carrier extraction)
+[!] STEGO-DECODE      pid=37864  comm=probe           fileless exec; read=1262B wrote=1072B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37865  comm=probe           fileless exec; read=1262B wrote=1072B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37866  comm=probe           fileless exec; read=1262B wrote=1072B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37867  comm=probe           fileless exec; read=1262B wrote=1072B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37868  comm=probe           fileless exec; read=1262B wrote=1072B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37869  comm=probe           fileless exec; read=1262B wrote=1072B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37870  comm=probe           fileless exec; read=1262B wrote=1072B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37871  comm=probe           fileless exec; read=32960B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37872  comm=probe           fileless exec; read=32960B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37873  comm=probe           fileless exec; read=32960B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37874  comm=probe           fileless exec; read=32959B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37875  comm=probe           fileless exec; read=20672B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37876  comm=probe           fileless exec; read=20671B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37877  comm=probe           fileless exec; read=37056B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37878  comm=probe           fileless exec; read=32960B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37879  comm=probe           fileless exec; read=32960B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37880  comm=probe           fileless exec; read=32960B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37881  comm=probe           fileless exec; read=32959B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37882  comm=probe           fileless exec; read=20672B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37883  comm=probe           fileless exec; read=20671B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37884  comm=probe           fileless exec; read=37056B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37885  comm=probe           fileless exec; read=65728B wrote=16384B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37886  comm=probe           fileless exec; read=65728B wrote=16384B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37887  comm=probe           fileless exec; read=65728B wrote=16384B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37888  comm=probe           fileless exec; read=65727B wrote=16384B ratio=4:1 sourced=0
+[!] STEGO-DECODE      pid=37889  comm=probe           fileless exec; read=20672B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37890  comm=probe           fileless exec; read=20671B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37891  comm=probe           fileless exec; read=37056B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37892  comm=probe           fileless exec; read=65728B wrote=16384B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37893  comm=probe           fileless exec; read=65728B wrote=16384B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37894  comm=probe           fileless exec; read=65728B wrote=16384B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37895  comm=probe           fileless exec; read=65727B wrote=16384B ratio=4:1 sourced=0
+[!] STEGO-DECODE      pid=37896  comm=probe           fileless exec; read=20672B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37897  comm=probe           fileless exec; read=20671B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37898  comm=probe           fileless exec; read=37056B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37899  comm=probe           fileless exec; read=131265B wrote=16384B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37900  comm=probe           fileless exec; read=131265B wrote=16384B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37901  comm=probe           fileless exec; read=131265B wrote=16384B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37902  comm=probe           fileless exec; read=131263B wrote=16384B ratio=8:1 sourced=0
+[!] STEGO-DECODE      pid=37903  comm=probe           fileless exec; read=20672B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37904  comm=probe           fileless exec; read=20671B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37905  comm=probe           fileless exec; read=37056B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37906  comm=probe           fileless exec; read=131265B wrote=16384B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37907  comm=probe           fileless exec; read=131265B wrote=16384B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37908  comm=probe           fileless exec; read=131265B wrote=16384B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37909  comm=probe           fileless exec; read=131263B wrote=16384B ratio=8:1 sourced=0
+[!] STEGO-DECODE      pid=37910  comm=probe           fileless exec; read=20672B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37911  comm=probe           fileless exec; read=20671B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37912  comm=probe           fileless exec; read=37056B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37913  comm=probe           fileless exec; read=524481B wrote=16384B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37914  comm=probe           fileless exec; read=524482B wrote=16384B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37915  comm=probe           fileless exec; read=524481B wrote=16384B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37916  comm=probe           fileless exec; read=524479B wrote=16384B ratio=32:1 sourced=0
+[!] STEGO-DECODE      pid=37917  comm=probe           fileless exec; read=20672B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37918  comm=probe           fileless exec; read=20671B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37919  comm=probe           fileless exec; read=37056B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37920  comm=probe           fileless exec; read=524481B wrote=16384B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37921  comm=probe           fileless exec; read=524482B wrote=16384B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37922  comm=probe           fileless exec; read=524481B wrote=16384B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37923  comm=probe           fileless exec; read=524479B wrote=16384B ratio=32:1 sourced=0
+[!] STEGO-DECODE      pid=37924  comm=probe           fileless exec; read=20672B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37925  comm=probe           fileless exec; read=20671B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37926  comm=probe           fileless exec; read=37056B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37927  comm=probe           fileless exec; read=2097346B wrote=16384B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37928  comm=probe           fileless exec; read=2097347B wrote=16384B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37929  comm=probe           fileless exec; read=2097346B wrote=16384B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37930  comm=probe           fileless exec; read=2097343B wrote=16384B ratio=128:1 sourced=0
+[!] STEGO-DECODE      pid=37931  comm=probe           fileless exec; read=20672B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37932  comm=probe           fileless exec; read=20671B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37933  comm=probe           fileless exec; read=37056B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37934  comm=probe           fileless exec; read=2097346B wrote=16384B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37935  comm=probe           fileless exec; read=2097347B wrote=16384B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37936  comm=probe           fileless exec; read=2097346B wrote=16384B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37937  comm=probe           fileless exec; read=2097343B wrote=16384B ratio=128:1 sourced=0
+[!] STEGO-DECODE      pid=37938  comm=probe           fileless exec; read=20672B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37939  comm=probe           fileless exec; read=20671B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37940  comm=probe           fileless exec; read=37056B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37941  comm=probe           fileless exec; read=16777411B wrote=16384B ratio=1024:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37942  comm=probe           fileless exec; read=16777413B wrote=16384B ratio=1024:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37943  comm=probe           fileless exec; read=16777411B wrote=16384B ratio=1024:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37944  comm=probe           fileless exec; read=16777407B wrote=16384B ratio=1024:1 sourced=0
+[!] STEGO-DECODE      pid=37945  comm=probe           fileless exec; read=20672B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37946  comm=probe           fileless exec; read=20671B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37947  comm=probe           fileless exec; read=37056B wrote=16384B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37948  comm=probe           fileless exec; read=16777411B wrote=16384B ratio=1024:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37949  comm=probe           fileless exec; read=16777413B wrote=16384B ratio=1024:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37950  comm=probe           fileless exec; read=16777411B wrote=16384B ratio=1024:1 sourced=0
+[!] STEGO-EXTRACTION  pid=37951  comm=probe           fileless exec; read=16777407B wrote=16384B ratio=1024:1 sourced=0
+[!] STEGO-DECODE      pid=37952  comm=probe           fileless exec; read=20672B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37953  comm=probe           fileless exec; read=20671B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37954  comm=probe           fileless exec; read=37056B wrote=16384B ratio=2:1 sourced=0
+[~] FILELESS-EXEC     pid=37955  comm=probe           read=4287B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37956  comm=probe           read=4287B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37957  comm=probe           read=4287B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37958  comm=probe           read=4287B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37959  comm=probe           read=4287B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37960  comm=probe           read=4287B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37961  comm=probe           read=4287B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[!] STEGO-DECODE      pid=37962  comm=probe           fileless exec; read=4287B wrote=16384B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37963  comm=probe           fileless exec; read=4287B wrote=16384B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37964  comm=probe           fileless exec; read=4287B wrote=16384B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37965  comm=probe           fileless exec; read=4287B wrote=16384B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37966  comm=probe           fileless exec; read=4287B wrote=16384B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37967  comm=probe           fileless exec; read=4287B wrote=16384B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37968  comm=probe           fileless exec; read=4287B wrote=16384B ratio=0:1 sourced=0
+[~] FILELESS-EXEC     pid=37969  comm=probe           read=8384B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37970  comm=probe           read=8384B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37971  comm=probe           read=8384B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37972  comm=probe           read=8383B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37973  comm=probe           read=8384B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37974  comm=probe           read=8383B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37975  comm=probe           read=8384B wrote=16384B ratio=0:1 sourced=1 (no carrier extraction)
+[!] STEGO-DECODE      pid=37976  comm=probe           fileless exec; read=8384B wrote=16384B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37977  comm=probe           fileless exec; read=8384B wrote=16384B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37978  comm=probe           fileless exec; read=8384B wrote=16384B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37979  comm=probe           fileless exec; read=8383B wrote=16384B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37980  comm=probe           fileless exec; read=8384B wrote=16384B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37981  comm=probe           fileless exec; read=8383B wrote=16384B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=37982  comm=probe           fileless exec; read=8384B wrote=16384B ratio=0:1 sourced=0
+[~] FILELESS-EXEC     pid=37983  comm=probe           read=16576B wrote=16384B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37984  comm=probe           read=16576B wrote=16384B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37985  comm=probe           read=16576B wrote=16384B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37986  comm=probe           read=16575B wrote=16384B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37987  comm=probe           read=16576B wrote=16384B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37988  comm=probe           read=16575B wrote=16384B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=37989  comm=probe           read=16576B wrote=16384B ratio=1:1 sourced=1 (no carrier extraction)
+[!] STEGO-DECODE      pid=37990  comm=probe           fileless exec; read=16576B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37991  comm=probe           fileless exec; read=16576B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37992  comm=probe           fileless exec; read=16576B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37993  comm=probe           fileless exec; read=16575B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37994  comm=probe           fileless exec; read=16576B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37995  comm=probe           fileless exec; read=16575B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37996  comm=probe           fileless exec; read=16576B wrote=16384B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=37997  comm=probe           fileless exec; read=131265B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37998  comm=probe           fileless exec; read=131265B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=37999  comm=probe           fileless exec; read=131265B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=38000  comm=probe           fileless exec; read=131263B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=38001  comm=probe           fileless exec; read=69824B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38002  comm=probe           fileless exec; read=69823B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38003  comm=probe           fileless exec; read=135361B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=38004  comm=probe           fileless exec; read=131265B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=38005  comm=probe           fileless exec; read=131265B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=38006  comm=probe           fileless exec; read=131265B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=38007  comm=probe           fileless exec; read=131263B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-DECODE      pid=38008  comm=probe           fileless exec; read=69824B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38009  comm=probe           fileless exec; read=69823B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38010  comm=probe           fileless exec; read=135361B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38011  comm=probe           fileless exec; read=262337B wrote=65536B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38012  comm=probe           fileless exec; read=262337B wrote=65536B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38013  comm=probe           fileless exec; read=262337B wrote=65536B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38014  comm=probe           fileless exec; read=262335B wrote=65536B ratio=4:1 sourced=0
+[!] STEGO-DECODE      pid=38015  comm=probe           fileless exec; read=69824B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38016  comm=probe           fileless exec; read=69823B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38017  comm=probe           fileless exec; read=135361B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38018  comm=probe           fileless exec; read=262337B wrote=65536B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38019  comm=probe           fileless exec; read=262337B wrote=65536B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38020  comm=probe           fileless exec; read=262337B wrote=65536B ratio=4:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38021  comm=probe           fileless exec; read=262335B wrote=65536B ratio=4:1 sourced=0
+[!] STEGO-DECODE      pid=38022  comm=probe           fileless exec; read=69824B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38023  comm=probe           fileless exec; read=69823B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38024  comm=probe           fileless exec; read=135361B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38025  comm=probe           fileless exec; read=524481B wrote=65536B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38026  comm=probe           fileless exec; read=524482B wrote=65536B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38027  comm=probe           fileless exec; read=524481B wrote=65536B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38028  comm=probe           fileless exec; read=524479B wrote=65536B ratio=8:1 sourced=0
+[!] STEGO-DECODE      pid=38029  comm=probe           fileless exec; read=69824B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38030  comm=probe           fileless exec; read=69823B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38031  comm=probe           fileless exec; read=135361B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38032  comm=probe           fileless exec; read=524481B wrote=65536B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38033  comm=probe           fileless exec; read=524482B wrote=65536B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38034  comm=probe           fileless exec; read=524481B wrote=65536B ratio=8:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38035  comm=probe           fileless exec; read=524479B wrote=65536B ratio=8:1 sourced=0
+[!] STEGO-DECODE      pid=38036  comm=probe           fileless exec; read=69824B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38037  comm=probe           fileless exec; read=69823B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38038  comm=probe           fileless exec; read=135361B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38039  comm=probe           fileless exec; read=2097346B wrote=65536B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38040  comm=probe           fileless exec; read=2097347B wrote=65536B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38041  comm=probe           fileless exec; read=2097346B wrote=65536B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38042  comm=probe           fileless exec; read=2097343B wrote=65536B ratio=32:1 sourced=0
+[!] STEGO-DECODE      pid=38043  comm=probe           fileless exec; read=69824B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38044  comm=probe           fileless exec; read=69823B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38045  comm=probe           fileless exec; read=135361B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38046  comm=probe           fileless exec; read=2097346B wrote=65536B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38047  comm=probe           fileless exec; read=2097347B wrote=65536B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38048  comm=probe           fileless exec; read=2097346B wrote=65536B ratio=32:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38049  comm=probe           fileless exec; read=2097343B wrote=65536B ratio=32:1 sourced=0
+[!] STEGO-DECODE      pid=38050  comm=probe           fileless exec; read=69824B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38051  comm=probe           fileless exec; read=69823B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38052  comm=probe           fileless exec; read=135361B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38053  comm=probe           fileless exec; read=8388802B wrote=65536B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38054  comm=probe           fileless exec; read=8388804B wrote=65536B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38055  comm=probe           fileless exec; read=8388802B wrote=65536B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38056  comm=probe           fileless exec; read=8388799B wrote=65536B ratio=128:1 sourced=0
+[!] STEGO-DECODE      pid=38057  comm=probe           fileless exec; read=69824B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38058  comm=probe           fileless exec; read=69823B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38059  comm=probe           fileless exec; read=135361B wrote=65536B ratio=2:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38060  comm=probe           fileless exec; read=8388802B wrote=65536B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38061  comm=probe           fileless exec; read=8388804B wrote=65536B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38072  comm=probe           fileless exec; read=8388802B wrote=65536B ratio=128:1 sourced=0
+[!] STEGO-EXTRACTION  pid=38074  comm=probe           fileless exec; read=8388799B wrote=65536B ratio=128:1 sourced=0
+[!] STEGO-DECODE      pid=38075  comm=probe           fileless exec; read=69824B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38076  comm=probe           fileless exec; read=69823B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38077  comm=probe           fileless exec; read=135361B wrote=65536B ratio=2:1 sourced=0
+[~] FILELESS-EXEC     pid=38078  comm=probe           read=16576B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38079  comm=probe           read=16576B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38080  comm=probe           read=16576B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38081  comm=probe           read=16575B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38082  comm=probe           read=16576B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38083  comm=probe           read=16575B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38084  comm=probe           read=16576B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[!] STEGO-DECODE      pid=38085  comm=probe           fileless exec; read=16576B wrote=65536B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=38086  comm=probe           fileless exec; read=16576B wrote=65536B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=38087  comm=probe           fileless exec; read=16576B wrote=65536B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=38088  comm=probe           fileless exec; read=16575B wrote=65536B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=38089  comm=probe           fileless exec; read=16576B wrote=65536B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=38090  comm=probe           fileless exec; read=16575B wrote=65536B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=38091  comm=probe           fileless exec; read=16576B wrote=65536B ratio=0:1 sourced=0
+[~] FILELESS-EXEC     pid=38092  comm=probe           read=32960B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38093  comm=probe           read=32960B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38094  comm=probe           read=32960B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38095  comm=probe           read=32959B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38096  comm=probe           read=32960B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38097  comm=probe           read=32959B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38098  comm=probe           read=32960B wrote=65536B ratio=0:1 sourced=1 (no carrier extraction)
+[!] STEGO-DECODE      pid=38099  comm=probe           fileless exec; read=32960B wrote=65536B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=38100  comm=probe           fileless exec; read=32960B wrote=65536B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=38101  comm=probe           fileless exec; read=32960B wrote=65536B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=38102  comm=probe           fileless exec; read=32959B wrote=65536B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=38103  comm=probe           fileless exec; read=32960B wrote=65536B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=38104  comm=probe           fileless exec; read=32959B wrote=65536B ratio=0:1 sourced=0
+[!] STEGO-DECODE      pid=38105  comm=probe           fileless exec; read=32960B wrote=65536B ratio=0:1 sourced=0
+[~] FILELESS-EXEC     pid=38106  comm=probe           read=65728B wrote=65536B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38107  comm=probe           read=65728B wrote=65536B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38108  comm=probe           read=65728B wrote=65536B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38109  comm=probe           read=65727B wrote=65536B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38110  comm=probe           read=65728B wrote=65536B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38111  comm=probe           read=65727B wrote=65536B ratio=1:1 sourced=1 (no carrier extraction)
+[~] FILELESS-EXEC     pid=38112  comm=probe           read=65728B wrote=65536B ratio=1:1 sourced=1 (no carrier extraction)
+[!] STEGO-DECODE      pid=38113  comm=probe           fileless exec; read=65728B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38114  comm=probe           fileless exec; read=65728B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38115  comm=probe           fileless exec; read=65728B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38116  comm=probe           fileless exec; read=65727B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38117  comm=probe           fileless exec; read=65728B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38118  comm=probe           fileless exec; read=65727B wrote=65536B ratio=1:1 sourced=0
+[!] STEGO-DECODE      pid=38119  comm=probe           fileless exec; read=65728B wrote=65536B ratio=1:1 sourced=0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
